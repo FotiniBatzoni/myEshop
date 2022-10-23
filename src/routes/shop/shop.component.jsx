@@ -1,19 +1,18 @@
-const { useContext }= require('react');
+import { useContext } from 'react';
 
-const { ProductsContext } = require('../../context/products.context');
-const {ProductCard}  = require( '../../components/product-card/product-card.component');
+import { ProductsContext } from '../../context/products.context';
+import ProductCard from '../../components/product-card/product-card.component';
 
 const Shop = () => {
-    const  {products}  = useContext(ProductsContext);
+    const { products } = useContext(ProductsContext)
 
-    return (
+    return ( 
         <div>
-        {products.map(({product}) =>(
+            {products.map((product) => (
                 <ProductCard key={product.id} product={product}/>
             ))}
         </div>
     )
 }
-
 
 export default Shop;
