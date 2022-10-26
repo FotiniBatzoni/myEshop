@@ -3,7 +3,7 @@ import { useState } from "react";
 import  FormInput from '../form-input/form-input.component';
 import Button, {BUTTON_TYPE_CLASSES} from "../button/button.component";
 import {
-    SignUpContainer,
+    SignInContainer,
     ButtonContainer
 } from './sign-in-form.styles';
 
@@ -57,7 +57,7 @@ const SignInForm = () =>{
     }
 
     return (
-        <SignUpContainer>
+        <SignInContainer>
             <h2>Already have an account?</h2>
             <span>Sign In with Email and Password</span>
             <form onSubmit ={handleSubmit}>
@@ -77,7 +77,7 @@ const SignInForm = () =>{
                 </ButtonContainer>
 
             </form>
-        </SignUpContainer>
+        </SignInContainer>
     )
 }
 
